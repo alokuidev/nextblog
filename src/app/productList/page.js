@@ -9,9 +9,9 @@ export default function page() {
   const getData = async () => {
     try {
       
-    const res  = await fetch("https://dummyjson.com/products");
+    const res  = await fetch("https://dummyjson.com/posts");
     const data = await res.json();
-    setApiData(data.products);
+    setApiData(data.posts);
     setloading(true); 
     } catch (error) {
       console.log(`We have encountered error: ${error}`)
@@ -34,7 +34,7 @@ export default function page() {
                 />
                 <div className="blog-content">
                   <h2>{elem.title}</h2>
-                  <p>{elem.description}</p>
+                  <p>{elem.body}</p>
                   <a href="#" className="read-more">
                     Read More
                   </a>
