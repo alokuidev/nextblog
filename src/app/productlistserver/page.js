@@ -37,3 +37,10 @@ const productlistsever = async () => {
 };
 
 export default productlistsever;
+
+export async function generateMetadata({params}){
+    return{
+      title:"My App productlist",
+      description:'Product list server side rendering'
+    }
+  }
