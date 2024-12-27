@@ -2,6 +2,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Allura } from "next/font/google";
+import Skeleton from "./Skeleton";
 
 export default function page() {
   const [apidata, setApiData] = useState([]);
@@ -21,7 +22,7 @@ export default function page() {
   useEffect(() => {
     getData();
   }, []);
-  if (loading === false) return <h1 className='loading' style={{color:'#000'}}>Loading...</h1>
+  if (loading === false) return <Skeleton/>
     return (
       <>
         <main className="blog-container">
