@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { useEffect, useState } from "react";
+import { Allura } from "next/font/google";
 
 export default function page() {
   const [apidata, setApiData] = useState([]);
@@ -33,8 +34,8 @@ export default function page() {
                   className="blog-image"
                 />
                 <div className="blog-content">
-                  <h2>{elem.title}</h2>
-                  <p>{elem.body}</p>
+                  <h2 style={{fontFamily:'Allura'}}>{elem.title}</h2>
+                  <p style={{fontFamily:'Allura'}}>{elem.body}</p>
                   <a href="#" className="read-more">
                     Read More
                   </a>
