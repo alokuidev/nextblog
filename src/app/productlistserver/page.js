@@ -1,4 +1,5 @@
 import React from "react";
+import Readmore from "./Readmore";
 
 async function productserverList() {
   try {
@@ -6,7 +7,7 @@ async function productserverList() {
     let data = await res.json();
     return data.posts;
   } catch (error) {
-    
+
   }
 }
 
@@ -26,9 +27,7 @@ const productlistsever = async () => {
                 <div className="blog-content">
                   <h2>{elem.title}</h2>
                   <p>{elem.body}</p>
-                  <a href="#" className="read-more">
-                    Read More
-                  </a>
+                  <Readmore buttonName={elem.title}/>
                 </div>
               </div>
             );
